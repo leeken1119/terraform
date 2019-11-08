@@ -27,3 +27,6 @@ variable "sg_port" {
 variable "ami" {
   default = "ami-f8ee9589"
 }
+variable "az" {
+  default = ["ap-east-1b", "ap-east-1c"]
+}
