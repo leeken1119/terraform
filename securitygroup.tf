@@ -11,7 +11,7 @@ resource "aws_security_group" "sg_in" {
   }
   tags {
     Name = "${element(var.securitygroup_in,count.index)}_sg"
-    tf = "test"
+    tf = "in"
   }
 }
 resource "aws_security_group" "sg_out" {
@@ -27,7 +27,7 @@ resource "aws_security_group" "sg_out" {
   }
   tags {
     Name = "${element(var.securitygroup_out,count.index)}_sg"
-    tf = "test"
+    tf = "out"
   }
 }
 resource "aws_security_group_rule" "out_rule" {

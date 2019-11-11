@@ -17,7 +17,7 @@ resource "aws_subnet" "public" {
   cidr_block        = "${element(var.public_cidr,count.index)}"
   tags = {
     Name = "ken_public_${count.index+1}"
-    tf = "test"
+    tf = "public"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_subnet" "privated" {
   cidr_block        = "${element(var.privated_cidr,count.index)}"
   tags = {
     Name = "ken_privated_${count.index+1}"
-    tf = "test"
+    tf = "privated"
   }
 }
 #建立route table for public

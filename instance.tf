@@ -10,7 +10,6 @@ resource "aws_instance" "bastion" {
 
   tags {
   Name = "ken_bastion"
-  tf = "test"
   }
 }
 resource "aws_instance" "web" {
@@ -29,7 +28,7 @@ resource "aws_instance" "web" {
 
 tags {
   Name = "ken_web${count.index+1}"
-  tf = "test"
+  tf = "eb"
   }
 }
 resource "aws_iam_instance_profile" "bastion_profile" {
